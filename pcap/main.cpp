@@ -76,7 +76,7 @@ int main(int argc, char* argv[]) {
         printf("dst port : %d\n\n", ntohs(tcp_packet->th_dport));
 
         printf("--   data   --\n");
-        int payload_len = header->caplen - (sizeof(struct libnet_ethernet_hdr) + sizeof(struct libnet_ipv4_hdr) + sizeof(struct libnet_tcp_hdr));
+        int payload_len = header->caplen - (sizeof(struct libnet_ethernet_hdr) + sizeof(struct libnet_ipv4_hdr) + sizeof(struct libnet_tcp_hdr) +1);
 
 
         int byte_check = 0; // check byte's number
